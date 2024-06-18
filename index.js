@@ -15,6 +15,17 @@ const postsNode = document.querySelector('.js-posts');
 const validationMessage = document.querySelector('#vallidation');
 
 
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+newPostBtnNode.disabled = true;
+
+input.addEventListener("input", function() {
+  button.disabled = !this.value.length;
+})
+
+
+
 
 
 newPostBtnNode.addEventListener('click', function() {
